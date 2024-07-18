@@ -1,0 +1,122 @@
+table, th, td {
+    position: relative;
+    border: 1.8px solid black; /* 表のグリッドの太さ、色は適宜調整 */
+    border-collapse: collapse;
+    z-index: 1000;
+}
+
+th {
+    position: relative;
+    padding: 5px; /* 表の余白は適宜調整 */
+    text-align: center;
+    font-weight: bolder;
+    z-index: 900;
+}
+
+td {
+    position: relative;
+    padding: 5px; /* 表の余白は適宜調整 */
+    text-align: center;
+    font-weight: bolder;
+    z-index: 900;
+    width: 125px;
+    height: 80px;
+}
+
+.period {
+    position: relative;
+    padding: 5px; /* 表の余白は適宜調整 */
+    text-align: center;
+    font-weight: bolder;
+    z-index: 900;
+    width: 60px;
+    height: 80px;
+}
+
+.prev-button, .next-button{
+    position:relative;
+    background-color: transparent;
+    color: black;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /* font-family: Arial, sans-serif; */
+    margin: 2px 2px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.prev-button::before {
+    content: "";
+    position: absolute;
+    top:50%;
+    left: 5%;
+    margin-top: -5px;
+    margin-right: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    transform:  rotate(90deg);
+}
+
+.next-button::before {
+    content: "";
+    position: absolute;
+    top:50%;
+    right: 5%;
+    margin-top: -5px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    transform:  rotate(-90deg);
+}
+
+button:hover {
+    background-color: #dfdfe6;
+    transform: scale(1.05);
+}
+
+sb {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 1px;
+    z-index: -1;
+} 
+
+cl {
+    position: relative;
+    text-align: center;
+    color:black;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0.5px;
+    z-index: -2;
+}
+
+td:not(:first-child) {
+    cursor: pointer;
+    transition: background-color 0.3s ease;  /* ホバー速度は適宜設定 */
+}
+
+td:not(:first-child):hover {
+    background-color: #dfdfe6; /* ホバー時の背景色は適宜設定 */
+}
+
+/* テーブルを中央に配置 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 10px;
+}
+
+table {
+    margin: 0;
+}

@@ -1,0 +1,43 @@
+/* ポップアップ */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+    z-index: 9999; 
+}
+
+/* バツボタン */
+#close-popup {
+    float: right;
+    cursor: pointer;
+}
+
+/* テキストエリア */
+textarea {
+    resize: none; 
+}
+
+/* プレースホルダー */
+textarea::placeholder {
+    font-style: italic; /* 定義修正 */
+    color: #aaa; /* 適宜修正 */
+}
+
+/* ポップアップ時のクラス */
+.table-disabled td {
+    cursor: default;
+    pointer-events: none; /* クリックイベントを無効化 */
+}
+
+.table-disabled td:hover {
+    background-color: transparent; /* ホバー効果を無効化 */
+}
+
+.popup-open {
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: inherit;
+}
